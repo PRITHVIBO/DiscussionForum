@@ -1,0 +1,135 @@
+/*=========================
+  COLOR VARIABLES
+=========================*/
+:root {
+    --primary-color: purple;        /* Green */
+    --secondary-color: white;       /* Orange */
+    --neutral-light: #f4f4f4;         /* Light Gray */
+    --neutral-dark: #333;             /* Dark Gray */
+    --text-color: #212121;            /* Dark Text */
+    --button-hover: purple;        /* Hover effect for buttons */
+    --border-color: rgb(229, 231, 235);
+}
+
+/*=========================
+  GLOBAL STYLES
+=========================*/
+body {
+     font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/*=========================
+  ZEPTO TEMPLATE STYLING
+=========================*/
+.zepto-template {
+    border: 0 solid var(--border-color);
+    border-color: var(--border-color);
+    box-sizing: border-box;
+    font-family: "Zepto Norms", sans-serif;
+    font-feature-settings: normal;
+    line-height: 24px;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    width: auto;
+    height: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*=========================
+  HEADER AND NAVBAR
+=========================*/
+.bg-color {
+    background-color: var(--primary-color);
+}
+
+.text-color {
+    color: white !important;
+}
+
+.header-details img {
+    height: 40px;
+}
+
+/*=========================
+  FORUM HEADER
+=========================*/
+.forum-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/*=========================
+  CREATE POST BUTTON
+=========================*/
+.create-post {
+    background-color: var(--secondary-color);
+    color: #FF6F61;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.create-post:hover {
+    background-color: var(--button-hover);
+}
+
+/*=========================
+  POSTS SECTION
+=========================*/
+.posts {
+    padding: 20px;
+}
+
+.posts .post {
+    background-color: #FF6F61;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.posts .post h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.posts .post p {
+    margin-bottom: 15px;
+}
+
+.posts .post button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.posts .post button:hover {
+    background-color: var(--button-hover);
+}
+
+/*=========================
+  FOOTER
+=========================*/
+footer {
+    background-color: var(--neutral-dark);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
