@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-}
+}*/
 
 body {
     background-color: #a82d94;
@@ -16,6 +16,30 @@ body {
     height: 100vh;
 }
 
+/* Updated forgot password styles for split layout */
+.forgot-password {
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.6s ease-in-out;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.forgot .sign-in {
+    transform: translateX(100%);
+}
+
+.container.forgot .forgot-password {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
 .container {
     background-color: #5d4866;
     border-radius: 30px;
@@ -25,6 +49,8 @@ body {
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    align-items: center;
+    justify-content: center;
 }
 
 .container p {
@@ -97,6 +123,9 @@ body {
     width: 50%;
     z-index: 2;
 }
+.container.forgot .sign-in {
+    display: none;
+}
 
 .container.active .sign-in {
     transform: translateX(100%);
@@ -160,7 +189,9 @@ body {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
-
+.container.forgot .toggle-container {
+    display: none;
+}
 .toggle {
     background-color: #a82d81;
     height: 100%;
@@ -208,4 +239,168 @@ body {
 
 .container.active .toggle-right {
     transform: translateX(200%);
+}
+
+/* Engineer image container styles */
+.engineer-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    padding: 40px;
+}
+
+.engineer-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #a82d83;
+    box-shadow: 0 10px 30px rgba(168, 45, 131, 0.3);
+    background: #fff;
+    padding: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.engineer-animation {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.code-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.code-line {
+    height: 4px;
+    background: linear-gradient(90deg, #a82d83, #8f2da8);
+    border-radius: 2px;
+    width: 80px;
+    animation: typing 2s ease-in-out infinite;
+}
+
+.code-line.short {
+    width: 50px;
+    animation-delay: 0.3s;
+}
+
+.code-line.medium {
+    width: 65px;
+    animation-delay: 0.6s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        width: 0;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Updated message-container for split layout */
+.message-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+}
+
+.message-container h1 {
+    color: #5d4866;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.message-container p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(90deg, #a82d83, #8f2da8);
+    border-radius: 4px;
+    animation: progressAnimation 3s ease-in-out infinite;
+}
+
+@keyframes progressAnimation {
+    0%, 100% {
+        width: 70%;
+    }
+    50% {
+        width: 85%;
+    }
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #a82d83;
+    font-weight: 600;
+}
+
+/* Simplified Back to Sign In button with high visibility */
+.back-btn {
+    background: linear-gradient(45deg, #ff4757, #ff3742);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    transition: all 0.3s ease;
+    animation: glow 2s infinite alternate;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+    background: linear-gradient(45deg, #ff3742, #ff2f3a);
+}
+
+@keyframes glow {
+    from { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); }
+    to { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.8), 0 0 5px rgba(255, 71, 87, 0.3); }
 }
