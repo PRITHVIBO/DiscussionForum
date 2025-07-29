@@ -7,7 +7,7 @@
 }
 body {
     background-color: #a82d94;
-    background: linear-gradient(to right, #a82d81, #982da8);
+    background: linear-gradient(to right, #982da8, #982da8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,9 +191,9 @@ body {
     display: none;
 }
 .toggle {
-    background-color: #a82d81;
+    background-color: #ef39b5;
     height: 100%;
-    background: linear-gradient(to right, #a95cc0, #8f2da8);
+    background: linear-gradient(to right, #e92aaf, #e92aaf);
     color: #fff;
     position: relative;
     left: -100%;
