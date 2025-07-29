@@ -1,11 +1,10 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-}*/
-
+}
 body {
     background-color: #a82d94;
     background: linear-gradient(to right, #a82d81, #982da8);
@@ -15,7 +14,6 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-
 /* Updated forgot password styles for split layout */
 .forgot-password {
     left: 0;
@@ -378,7 +376,6 @@ body {
     color: #a82d83;
     font-weight: 600;
 }
-
 /* Simplified Back to Sign In button with high visibility */
 .back-btn {
     background: linear-gradient(45deg, #ff4757, #ff3742);
@@ -393,13 +390,11 @@ body {
     transition: all 0.3s ease;
     animation: glow 2s infinite alternate;
 }
-
 .back-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
     background: linear-gradient(45deg, #ff3742, #ff2f3a);
 }
-
 @keyframes glow {
     from { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); }
     to { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.8), 0 0 5px rgba(255, 71, 87, 0.3); }
