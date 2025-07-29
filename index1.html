@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechForum - Discussion Community</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="background-image">
+        <img src="dsi.jpg" alt="Background">
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>TechForum</h1>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Popular</a>
+                <a href="index.html" class="nav-link">Sign In/Up</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search discussions..." id="searchInput">
+                <button id="searchBtn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="sidebar">
+                <div class="stats-card">
+                    <h3>Forum Stats</h3>
+                    <div class="stat">
+                        <span class="stat-number">1,234</span>
+                        <span class="stat-label">Discussions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5,678</span>
+                        <span class="stat-label">Members</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12,345</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                </div>
+
+                <div class="categories">
+                    <h3>Categories</h3>
+                    <div class="category-list">
+                        <div class="category-item" data-category="softskills">
+                            <span class="category-name">Soft Skills</span>
+                            <span class="category-count">234</span>
+                        </div>
+                        <div class="category-item" data-category="technology">
+                            <span class="category-name">Technology</span>
+                            <span class="category-count">189</span>
+                        </div>
+                        <div class="category-item" data-category="academics">
+                            <span class="category-name">Academics</span>
+                            <span class="category-count">156</span>
+                        </div>
+                        <div class="category-item" data-category="sports">
+                            <span class="category-name">Sports</span>
+                            <span class="category-count">98</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="toolbar">
+                    <div class="sort-options">
+                        <label>Sort by:</label>
+                        <select id="sortSelect">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="topics-list" id="topicsList">
+                    <div class="topic-card" data-category="softskills">
+                        <div class="topic-avatar">SS</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Effective Communication Skills in Remote Work</h3>
+                            <p class="topic-meta">Started by <strong>sarah_pro</strong> • 2 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Communication</span>
+                                <span class="tag">Remote Work</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">156</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-category="technology">
+                        <div class="topic-avatar">TC</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">AI Impact on Future Job Markets</h3>
+                            <p class="topic-meta">Started by <strong>tech_analyst</strong> • 4 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Artificial Intelligence</span>
+                                <span class="tag">Career</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">203</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-category="academics">
+                        <div class="topic-avatar">AC</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Study Techniques for Better Retention</h3>
+                            <p class="topic-meta">Started by <strong>study_guru</strong> • 6 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Study Methods</span>
+                                <span class="tag">Learning</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">287</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-category="sports">
+                        <div class="topic-avatar">SP</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Mental Preparation for Competitive Sports</h3>
+                            <p class="topic-meta">Started by <strong>coach_mike</strong> • 8 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Mental Health</span>
+                                <span class="tag">Competition</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">145</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-category="softskills">
+                        <div class="topic-avatar">SS</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Leadership Qualities for Team Management</h3>
+                            <p class="topic-meta">Started by <strong>team_lead</strong> • 10 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Leadership</span>
+                                <span class="tag">Management</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">198</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-category="technology">
+                        <div class="topic-avatar">TC</div>
+                        <div class="topic-content">
+                            <h3 class="topic-title">Cybersecurity Best Practices for Students</h3>
+                            <p class="topic-meta">Started by <strong>security_expert</strong> • 12 hours ago</p>
+                            <div class="topic-tags">
+                                <span class="tag">Cybersecurity</span>
+                                <span class="tag">Safety</span>
+                            </div>
+                        </div>
+                        <div class="topic-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">167</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn" data-page="prev">← Previous</button>
+                    <button class="page-btn active" data-page="1">1</button>
+                    <button class="page-btn" data-page="2">2</button>
+                    <button class="page-btn" data-page="3">3</button>
+                    <button class="page-btn" data-page="next">Next →</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechForum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
