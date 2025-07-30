@@ -1,41 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 body {
-    background-color: #a82d94;
-    background: linear-gradient(to right, #982da8, #982da8);
+    background-image: url('dsi.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    position: relative;
 }
-.home-button {
-            position: absolute; /* Position relative to the main container */
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: white; /* Using a color from your existing theme */
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-size: 12px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1001; /* Ensure it stays on top of other elements */
-            transition: background-color 0.3s ease;
-        }
 
-        .home-button:hover {
-            background-color: #c14aa9; /* A slightly lighter shade for the hover effect */
-        }
-/* Updated forgot password styles for split layout */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Position container above the overlay */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* --- Original Login Form Styles --- */
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-2px);
+}
+
 .forgot-password {
     left: 0;
     width: 100%;
@@ -60,7 +87,7 @@ body {
 }
 
 .container {
-    background-color: #5d4866;
+    background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -81,6 +108,7 @@ body {
 
 .container span {
     font-size: 12px;
+    margin: 15px 0;
 }
 
 .container a {
@@ -102,12 +130,26 @@ body {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Added for smooth hover transition */
 }
+
+/* --- ADDED HOVER EFFECT --- */
+.container button:hover {
+    background-color: #8e246e; /* Darker shade on hover */
+    transform: scale(1.02); /* Slightly enlarge button on hover */
+}
+
 
 .container button.hidden {
     background-color: transparent;
     border-color: #fff;
 }
+
+/* Make sure hidden button hover doesn't have solid background */
+.container button.hidden:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
 
 .container form {
     background-color: #fff;
@@ -142,6 +184,7 @@ body {
     width: 50%;
     z-index: 2;
 }
+
 .container.forgot .sign-in {
     display: none;
 }
@@ -165,31 +208,18 @@ body {
 }
 
 @keyframes move {
+
     0%,
     49.99% {
         opacity: 0;
         z-index: 1;
     }
+
     50%,
     100% {
         opacity: 1;
         z-index: 5;
     }
-}
-
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3px;
-    width: 40px;
-    height: 40px;
 }
 
 .toggle-container {
@@ -208,9 +238,11 @@ body {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
+
 .container.forgot .toggle-container {
     display: none;
 }
+
 .toggle {
     background-color: #ef39b5;
     height: 100%;
@@ -284,9 +316,12 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -324,10 +359,13 @@ body {
 }
 
 @keyframes typing {
-    0%, 100% {
+
+    0%,
+    100% {
         width: 0;
         opacity: 0.5;
     }
+
     50% {
         opacity: 1;
     }
@@ -384,9 +422,12 @@ body {
 }
 
 @keyframes progressAnimation {
-    0%, 100% {
+
+    0%,
+    100% {
         width: 70%;
     }
+
     50% {
         width: 85%;
     }
@@ -397,6 +438,7 @@ body {
     color: #a82d83;
     font-weight: 600;
 }
+
 /* Simplified Back to Sign In button with high visibility */
 .back-btn {
     background: linear-gradient(45deg, #ff4757, #ff3742);
@@ -411,12 +453,19 @@ body {
     transition: all 0.3s ease;
     animation: glow 2s infinite alternate;
 }
+
 .back-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
     background: linear-gradient(45deg, #ff3742, #ff2f3a);
 }
+
 @keyframes glow {
-    from { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); }
-    to { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.8), 0 0 5px rgba(255, 71, 87, 0.3); }
+    from {
+        box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    }
+
+    to {
+        box-shadow: 0 4px 15px rgba(255, 71, 87, 0.8), 0 0 5px rgba(255, 71, 87, 0.3);
+    }
 }
