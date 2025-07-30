@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechForum - Categories</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="text-gray-800">
+
+    <div id="app" class="min-h-screen flex flex-col">
+        <!-- Header (adapted from your index1.html) -->
+        <header class="header-gradient text-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center flex-wrap gap-4">
+                <h1 class="text-2xl font-bold">TechForum</h1>
+                <nav class="flex items-center space-x-2 sm:space-x-4 text-sm sm:text-base">
+                    <a href="index1.html" class="px-3 py-2 rounded-full hover:bg-white/20 transition-colors">Home</a>
+                    <a href="index2.html" class="px-3 py-2 rounded-full bg-white/20 font-semibold">Categories</a>
+                    <a href="#" class="px-3 py-2 rounded-full hover:bg-white/20 transition-colors">Popular</a>
+                    <a href="index.html" class="px-3 py-2 rounded-full hover:bg-white/20 transition-colors">Sign In/Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+            <!-- Breadcrumb Navigation -->
+            <nav class="text-sm font-medium text-gray-500 mb-6">
+                <a href="index1.html" class="hover:text-indigo-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="index2.html" class="hover:text-indigo-600">Categories</a>
+                <span class="text-gray-800"></span>
+            </nav>
+
+            <!-- Category Choice Bar -->
+            <div class="mb-8">
+                <div id="category-choice-bar" class="flex items-center space-x-2 sm:space-x-3 overflow-x-auto pb-2 category-scrollbar">
+                    <!-- Category chips will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- Topics List -->
+            <div id="topics-list" class="space-y-4">
+                <!-- Topic cards will be dynamically inserted here -->
+            </div>
+        </main>
+
+        <!-- Footer (adapted from your index1.html) -->
+        <footer class="bg-gray-800 text-white text-center py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p>&copy; 2025 TechForum. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+     <script src="script2.js" defer></script>
+</body>
+</html>

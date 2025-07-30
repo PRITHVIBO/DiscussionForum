@@ -1,0 +1,34 @@
+/* Custom styles to match the theme */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+}
+
+.header-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.topic-avatar-gradient {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tag-blue {
+    background-color: #f0f2ff;
+    color: #667eea;
+}
+
+.reply-overlay {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Styles for smooth expansion */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.expandable-content.expanded {
+    max-height: 1000px; /* Adjust as needed */
+}
