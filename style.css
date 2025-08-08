@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +44,7 @@ body::before {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgb(41, 245, 232);
     color: #333;
     text-decoration: none;
     border-radius: 8px;
@@ -59,7 +58,7 @@ body::before {
 }
 
 .home-button:hover {
-    background-color: #f2f2f2;
+    background-color: #0d97dc;
     transform: translateY(-2px);
 }
 
@@ -84,9 +83,7 @@ body::before {
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
-
 }
-
 
 .container {
     background-color: #fff;
@@ -112,6 +109,7 @@ body::before {
     font-size: 12px;
     margin: 15px 0;
 }
+
 .container a {
     color: #5d4866;
     font-size: 13px;
@@ -120,16 +118,14 @@ body::before {
     transition: color 0.2s ease-in-out;
 }
 
-/*
-  This new rule defines the hover effect.
-*/
 .container a:hover {
-    color: #a82d83; /* Changes color to the theme's primary pink */
-    text-decoration: underline; /* Underlines the text */
+    color: #190562;
+    text-decoration: underline;
 }
 
+/* Enhanced button styles with proper hover effects */
 .container button {
-    background-color: #a82d83;
+    background-color: #3d13e2;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -140,26 +136,60 @@ body::before {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out; /* Added for smooth hover transition */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
 }
 
-/* --- ADDED HOVER EFFECT --- */
+/* Enhanced hover effect for all buttons - works during transitions */
 .container button:hover {
-    background-color: #8e246e; /* Darker shade on hover */
-    transform: scale(1.02); /* Slightly enlarge button on hover */
+    background-color: #2a0fb3 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(61, 19, 226, 0.4);
 }
 
+/* Specific hover for form buttons (Sign In and Sign Up) */
+.form-container button:hover {
+    background-color: #2a0fb3 !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(61, 19, 226, 0.6);
+}
+
+/* Enhanced hover that works even during container transitions */
+.sign-in button:hover,
+.sign-up button:hover {
+    background-color: #2a0fb3 !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(61, 19, 226, 0.7);
+    z-index: 100;
+}
+
+/* Add a subtle animation effect */
+.container button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Ensure buttons maintain hover during form transitions */
+.container.active .sign-in button:hover,
+.container.active .sign-up button:hover {
+    background-color: #2a0fb3 !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(61, 19, 226, 0.7);
+}
 
 .container button.hidden {
     background-color: transparent;
     border-color: #fff;
+    color: #fff;
 }
 
-/* Make sure hidden button hover doesn't have solid background */
+/* Enhanced hover for toggle buttons */
 .container button.hidden:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
-
 
 .container form {
     background-color: #fff;
@@ -180,19 +210,31 @@ body::before {
     border-radius: 8px;
     width: 100%;
     outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect for input fields too */
+.container input:hover {
+    background-color: #e0e0e0;
+}
+
+.container input:focus {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 2px rgba(61, 19, 226, 0.2);
 }
 
 .form-container {
     position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    z-index: 5;
 }
 
 .sign-in {
     left: 0;
     width: 50%;
-    z-index: 2;
+    z-index: 10;
 }
 
 .container.forgot .sign-in {
@@ -201,24 +243,24 @@ body::before {
 
 .container.active .sign-in {
     transform: translateX(100%);
+    z-index: 10;
 }
 
 .sign-up {
     left: 0;
     width: 50%;
     opacity: 0;
-    z-index: 1;
+    z-index: 8;
 }
 
 .container.active .sign-up {
     transform: translateX(100%);
     opacity: 1;
-    z-index: 5;
+    z-index: 15;
     animation: move 0.6s;
 }
 
 @keyframes move {
-
     0%,
     49.99% {
         opacity: 0;
@@ -254,9 +296,9 @@ body::before {
 }
 
 .toggle {
-    background-color: #ef39b5;
+    background-color: #6039ef;
     height: 100%;
-    background: linear-gradient(to right, #e92aaf, #e92aaf);
+    background: linear-gradient(to right, #163d89, #1820f3);
     color: #fff;
     position: relative;
     left: -100%;
@@ -318,7 +360,7 @@ body::before {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 4px solid #a82d83;
+    border: 4px solid #2d0aba;
     box-shadow: 0 10px 30px rgba(168, 45, 131, 0.3);
     background: #fff;
     padding: 20px;
@@ -326,7 +368,6 @@ body::before {
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0px);
@@ -369,7 +410,6 @@ body::before {
 }
 
 @keyframes typing {
-
     0%,
     100% {
         width: 0;
@@ -432,7 +472,6 @@ body::before {
 }
 
 @keyframes progressAnimation {
-
     0%,
     100% {
         width: 70%;
@@ -449,7 +488,7 @@ body::before {
     font-weight: 600;
 }
 
-/* Simplified Back to Sign In button with high visibility */
+/* Enhanced Back to Sign In button with better hover */
 .back-btn {
     background: linear-gradient(45deg, #ff4757, #ff3742);
     color: white;
@@ -465,8 +504,8 @@ body::before {
 }
 
 .back-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.6);
     background: linear-gradient(45deg, #ff3742, #ff2f3a);
 }
 
