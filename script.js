@@ -10,7 +10,7 @@ registerBtn.addEventListener('click', () => {
 });
 
 loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
+    container.classList.removes("active");
     container.classList.remove("forgot");
 });
 

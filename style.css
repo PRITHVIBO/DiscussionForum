@@ -37,7 +37,6 @@ body::before {
     z-index: 1;
 }
 
-
 /* --- Original Login Form Styles --- */
 
 .home-button {
@@ -84,7 +83,9 @@ body::before {
     opacity: 1;
     z-index: 5;
     animation: move 0.6s;
+
 }
+
 
 .container {
     background-color: #fff;
@@ -110,12 +111,20 @@ body::before {
     font-size: 12px;
     margin: 15px 0;
 }
-
 .container a {
     color: #5d4866;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+/*
+  This new rule defines the hover effect.
+*/
+.container a:hover {
+    color: #a82d83; /* Changes color to the theme's primary pink */
+    text-decoration: underline; /* Underlines the text */
 }
 
 .container button {
