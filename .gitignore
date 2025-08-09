@@ -1,6 +1,9 @@
 # Database initialization file
 config/.db_initialized
 
+# Demo user storage (for testing without MySQL)
+users.json
+
 # IDE and editor files
 .vscode/
 .idea/

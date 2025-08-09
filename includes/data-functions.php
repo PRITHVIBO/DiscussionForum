@@ -1,5 +1,14 @@
 <?php
 require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/demo-functions.php';
+
+// Check if we can connect to database, if not use demo functions
+$use_demo = false;
+try {
+    $test_pdo = getDBConnection();
+} catch (Exception $e) {
+    $use_demo = true;
+}
 
 /**
  * User Authentication and Management Functions
@@ -9,6 +18,11 @@ require_once __DIR__ . '/../config/config.php';
  * Register a new user
  */
 function registerUser($name, $email, $password) {
+    global $use_demo;
+    if ($use_demo) {
+        return registerUserDemo($name, $email, $password);
+    }
+    
     try {
         $pdo = getDBConnection();
         
@@ -38,6 +52,11 @@ function registerUser($name, $email, $password) {
  * Login user
  */
 function loginUser($email, $password) {
+    global $use_demo;
+    if ($use_demo) {
+        return loginUserDemo($email, $password);
+    }
+    
     try {
         $pdo = getDBConnection();
         
@@ -76,6 +95,11 @@ function loginUser($email, $password) {
  * Create user session
  */
 function createUserSession($userId) {
+    global $use_demo;
+    if ($use_demo) {
+        return createUserSessionDemo($userId);
+    }
+    
     session_start();
     
     // Generate session token
@@ -116,6 +140,11 @@ function createUserSession($userId) {
  * Check if user is authenticated
  */
 function isAuthenticated() {
+    global $use_demo;
+    if ($use_demo) {
+        return isAuthenticatedDemo();
+    }
+    
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -163,6 +192,11 @@ function isAuthenticated() {
  * Get current user information
  */
 function getCurrentUser() {
+    global $use_demo;
+    if ($use_demo) {
+        return getCurrentUserDemo();
+    }
+    
     if (!isAuthenticated()) {
         return null;
     }
@@ -183,6 +217,11 @@ function getCurrentUser() {
  * Destroy user session (logout)
  */
 function destroyUserSession() {
+    global $use_demo;
+    if ($use_demo) {
+        return destroyUserSessionDemo();
+    }
+    
     if (!isset($_SESSION)) {
         session_start();
     }

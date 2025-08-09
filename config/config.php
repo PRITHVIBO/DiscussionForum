@@ -31,7 +31,7 @@ function getDBConnection() {
         return $pdo;
     } catch (PDOException $e) {
         error_log("Database connection failed: " . $e->getMessage());
-        die("Database connection failed. Please check your configuration.");
+        throw $e; // Re-throw to allow fallback handling
     }
 }
 
@@ -117,10 +117,19 @@ function initializeDatabase() {
     }
 }
 
-// Initialize database on first run
+// Initialize database on first run (only if database is available)
 if (!file_exists(__DIR__ . '/.db_initialized')) {
-    if (initializeDatabase()) {
-        file_put_contents(__DIR__ . '/.db_initialized', date('Y-m-d H:i:s'));
+    try {
+        // Test database connection first
+        $test_pdo = new PDO("mysql:host=" . DB_HOST . ";charset=utf8mb4", DB_USER, DB_PASS);
+        
+        // If connection successful, initialize database
+        if (initializeDatabase()) {
+            file_put_contents(__DIR__ . '/.db_initialized', date('Y-m-d H:i:s'));
+        }
+    } catch (PDOException $e) {
+        // Database not available - will use demo mode
+        error_log("Database initialization skipped: " . $e->getMessage());
     }
 }
 ?>
