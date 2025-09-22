@@ -1,0 +1,38 @@
+# Core OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.idea/
+.vscode/
+
+# Composer / PHP dependencies (if later added)
+vendor/
+composer.lock
+
+# Node / Frontend (if later added)
+node_modules/
+*.tsbuildinfo
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Sensitive runtime config (keep example templates tracked)
+config/config.php
+config/db.php
+config/email_config.php
+
+# Cache / sessions / uploads (adjust if you add such dirs)
+cache/
+sessions/
+uploads/
+
+# Misc
+coverage/
+phpunit.xml
+
+# Ignore debug or temp artifacts
+register_debug.txt
