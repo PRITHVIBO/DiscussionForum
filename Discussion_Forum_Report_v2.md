@@ -1,7 +1,3 @@
-% Note: Exporting to Word/PDF
-% - Page breaks are suggested with: <div style="page-break-after: always;"></div>
-% - Replace all "INSERT SCREENSHOT FROM WORD" placeholders with your actual images from the DOCX.
-% - Keep figure numbering consistent when replacing images.
 
 # DISCUSSION FORUM SYSTEM - PROJECT REPORT
 
