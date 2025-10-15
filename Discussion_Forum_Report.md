@@ -376,24 +376,11 @@ The content moderation process:
 
 ## 5.1 Technology and Tools
 
-### 5.1.1 Frontend Technologies
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Styling and responsive design
-- **JavaScript**: Client-side interactivity
-- **Bootstrap**: Responsive framework
-- **jQuery**: DOM manipulation and AJAX
+**Frontend Technologies:** HTML5 (Semantic markup and structure), CSS3 (Styling and responsive design), JavaScript (Client-side interactivity), Bootstrap (Responsive framework), jQuery (DOM manipulation and AJAX)
 
-### 5.1.2 Backend Technologies
-- **PHP**: Server-side scripting
-- **MySQL**: Database management
-- **Apache**: Web server
-- **Composer**: Dependency management
+**Backend Technologies:** PHP (Server-side scripting), MySQL (Database management), Apache (Web server), Composer (Dependency management)
 
-### 5.1.3 Development Tools
-- **Git**: Version control
-- **VS Code**: Code editor
-- **XAMPP**: Development environment
-- **phpMyAdmin**: Database administration
+**Development Tools:** Git (Version control), VS Code (Code editor), XAMPP (Development environment), phpMyAdmin (Database administration)
 
 ## 5.2 Development Environment
 
