@@ -28,9 +28,10 @@
    4.4 Use Case Diagrams  
    4.5 ER Diagrams  
    4.6 Module Design  
+   4.7 Flow Charts  
 
 5. IMPLEMENTATION  
-   5.1 Technologies Used  
+   5.1 Technology and Tools  
    5.2 Development Environment  
    5.3 Code Structure  
    5.4 Key Modules Implementation  
@@ -158,31 +159,11 @@ The proposed Discussion Forum System leverages modern web technologies to create
 
 ## 2.1 Existing Systems
 
-### 2.1.1 Traditional Forum Systems
-Traditional forum systems like phpBB, vBulletin, and SMF have been the cornerstone of online discussions for decades. These systems typically feature:
+Traditional forum systems like phpBB, vBulletin, and SMF have been the cornerstone of online discussions for decades, featuring thread-based discussion models, user registration and authentication, basic moderation tools, category-based organization, and search functionality.
 
-- Thread-based discussion model
-- User registration and authentication
-- Basic moderation tools
-- Category-based organization
-- Search functionality
+Contemporary platforms such as Reddit, Stack Overflow, and Discourse offer enhanced features including advanced user interfaces, real-time updates, voting systems, rich media support, and API integrations.
 
-### 2.1.2 Modern Social Platforms
-Contemporary platforms such as Reddit, Stack Overflow, and Discourse offer enhanced features:
-
-- Advanced user interfaces
-- Real-time updates
-- Voting systems
-- Rich media support
-- API integrations
-
-### 2.1.3 Learning Management Systems
-Platforms like Moodle and Canvas include discussion forums as part of their learning ecosystems, providing:
-
-- Integration with course management
-- Grading capabilities
-- Student-teacher interaction tools
-- Progress tracking
+Learning management systems like Moodle and Canvas include discussion forums as part of their learning ecosystems, providing integration with course management, grading capabilities, student-teacher interaction tools, and progress tracking.
 
 ## 2.2 Analysis of Existing Systems
 
@@ -235,101 +216,43 @@ Platforms like Moodle and Canvas include discussion forums as part of their lear
 
 ## 3.1 Feasibility Study
 
-### 3.1.1 Technical Feasibility
-The project is technically feasible due to:
-- Availability of required technologies
-- Skilled development team
-- Access to development tools and environments
-- Established web development practices
+The project is technically feasible due to availability of required technologies, skilled development team, access to development tools and environments, and established web development practices.
 
-### 3.1.2 Economic Feasibility
-- Development costs are reasonable
-- Open-source tools reduce licensing expenses
-- Hosting costs are minimal
-- Long-term maintenance costs are manageable
+Development costs are reasonable with open-source tools reducing licensing expenses, minimal hosting costs, and manageable long-term maintenance costs.
 
-### 3.1.3 Operational Feasibility
-- User-friendly interface reduces training needs
-- Intuitive navigation minimizes learning curve
-- Administrative tools are straightforward
-- System can be operated with minimal technical expertise
+The user-friendly interface reduces training needs, intuitive navigation minimizes learning curve, administrative tools are straightforward, and the system can be operated with minimal technical expertise.
 
-### 3.1.4 Schedule Feasibility
-- Project timeline is realistic
-- Development phases are well-defined
-- Testing and deployment schedules are achievable
-- Resource allocation is appropriate
+The project timeline is realistic with well-defined development phases, achievable testing and deployment schedules, and appropriate resource allocation.
 
 ## 3.2 Requirements Analysis
 
-### 3.2.1 Stakeholder Analysis
-**Primary Stakeholders:**
-- End Users: Community members who participate in discussions
-- Administrators: System managers who oversee operations
-- Moderators: Users responsible for content management
+Primary stakeholders include end users (community members who participate in discussions), administrators (system managers who oversee operations), and moderators (users responsible for content management). Secondary stakeholders include system developers (technical team maintaining the platform) and content contributors (active users who create valuable content).
 
-**Secondary Stakeholders:**
-- System Developers: Technical team maintaining the platform
-- Content Contributors: Active users who create valuable content
-
-### 3.2.2 Requirement Gathering Techniques
-- Interviews with potential users
-- Analysis of existing forum systems
-- Review of user feedback from similar platforms
-- Technical requirement specifications
+Requirements were gathered through interviews with potential users, analysis of existing forum systems, review of user feedback from similar platforms, and technical requirement specifications.
 
 ## 3.3 Functional Requirements
 
-### 3.3.1 User Management
-1. **User Registration**: Users can create accounts with email verification
-2. **User Authentication**: Secure login/logout functionality
-3. **Profile Management**: Users can update their profiles and preferences
-4. **Password Management**: Password reset and change capabilities
+**User Management:**
+Users can create accounts with email verification, utilize secure login/logout functionality, update their profiles and preferences, and manage passwords with reset and change capabilities.
 
-### 3.3.2 Discussion Management
-1. **Topic Creation**: Users can create new discussion topics
-2. **Reply System**: Users can reply to topics and other replies
-3. **Thread Management**: Topics can be categorized and organized
-4. **Content Editing**: Users can edit their own posts
+**Discussion Management:**
+Users can create new discussion topics, reply to topics and other replies, categorize and organize threads, and edit their own posts.
 
-### 3.3.3 Search and Navigation
-1. **Search Functionality**: Full-text search across topics and posts
-2. **Filtering Options**: Filter by category, date, user, etc.
-3. **Pagination**: Efficient navigation through large content sets
-4. **Bookmarking**: Users can bookmark favorite topics
+**Search and Navigation:**
+The system provides full-text search across topics and posts, filtering options by category, date, user, efficient pagination through large content sets, and bookmarking for favorite topics.
 
-### 3.3.4 Administrative Functions
-1. **User Management**: Admin can manage user accounts
-2. **Content Moderation**: Tools for moderating inappropriate content
-3. **Category Management**: Create and manage discussion categories
-4. **System Settings**: Configure system-wide settings
+**Administrative Functions:**
+Administrators can manage user accounts, moderate inappropriate content, create and manage discussion categories, and configure system-wide settings.
 
 ## 3.4 Non-Functional Requirements
 
-### 3.4.1 Performance Requirements
-- Page load time should be less than 3 seconds
-- System should handle up to 1000 concurrent users
-- Database queries should complete within 1 second
-- Search results should be returned within 2 seconds
+**Performance:** Page load time should be less than 3 seconds, the system should handle up to 1000 concurrent users, database queries should complete within 1 second, and search results should be returned within 2 seconds.
 
-### 3.4.2 Security Requirements
-- User passwords must be encrypted
-- Session management must be secure
-- Input validation must prevent SQL injection
-- XSS protection must be implemented
-- CSRF protection must be in place
+**Security:** User passwords must be encrypted, session management must be secure, input validation must prevent SQL injection, XSS protection must be implemented, and CSRF protection must be in place.
 
-### 3.4.3 Usability Requirements
-- Interface should be intuitive and easy to navigate
-- System should be accessible to users with disabilities
-- Help documentation should be available
-- Error messages should be clear and helpful
+**Usability:** The interface should be intuitive and easy to navigate, the system should be accessible to users with disabilities, help documentation should be available, and error messages should be clear and helpful.
 
-### 3.4.4 Reliability Requirements
-- System uptime should be 99.5%
-- Data backup should occur daily
-- Error recovery mechanisms should be in place
-- System should handle peak loads gracefully
+**Reliability:** System uptime should be 99.5%, data backup should occur daily, error recovery mechanisms should be in place, and the system should handle peak loads gracefully.
 
 ---
 
@@ -337,154 +260,45 @@ The project is technically feasible due to:
 
 ## 4.1 Architecture Design
 
-### 4.1.1 System Architecture
-The system follows a three-tier architecture:
+The system follows a three-tier architecture with a presentation layer (user interface components, client-side validation, responsive design elements), application layer (business logic implementation, API endpoints, data processing), and data layer (database management, data access objects, query optimization).
 
-**Presentation Layer:**
-- User interface components
-- Client-side validation
-- Responsive design elements
-
-**Application Layer:**
-- Business logic implementation
-- API endpoints
-- Data processing
-
-**Data Layer:**
-- Database management
-- Data access objects
-- Query optimization
-
-### 4.1.2 MVC Architecture
-The system implements the Model-View-Controller pattern:
-
-**Model:**
-- Data structures and business logic
-- Database interactions
-- Data validation rules
-
-**View:**
-- User interface templates
-- Presentation logic
-- Client-side components
-
-**Controller:**
-- Request handling
-- Response generation
-- Business logic coordination
+The system implements the Model-View-Controller (MVC) pattern where the Model handles data structures and business logic, database interactions, and data validation rules; the View manages user interface templates, presentation logic, and client-side components; and the Controller handles request handling, response generation, and business logic coordination.
 
 ## 4.2 Database Design
 
-### 4.2.1 Database Schema
 The database consists of the following main tables:
 
-**Users Table:**
-- user_id (Primary Key)
-- username
-- email
-- password_hash
-- registration_date
-- last_login
-- user_role
-- profile_picture
-- bio
+**Users Table:** user_id (Primary Key), username, email, password_hash, registration_date, last_login, user_role, profile_picture, bio
 
-**Topics Table:**
-- topic_id (Primary Key)
-- title
-- description
-- created_by (Foreign Key)
-- created_date
-- category_id (Foreign Key)
-- view_count
-- reply_count
-- is_sticky
-- is_locked
+**Topics Table:** topic_id (Primary Key), title, description, created_by (Foreign Key), created_date, category_id (Foreign Key), view_count, reply_count, is_sticky, is_locked
 
-**Posts Table:**
-- post_id (Primary Key)
-- topic_id (Foreign Key)
-- user_id (Foreign Key)
-- content
-- created_date
-- updated_date
-- parent_post_id (Foreign Key)
+**Posts Table:** post_id (Primary Key), topic_id (Foreign Key), user_id (Foreign Key), content, created_date, updated_date, parent_post_id (Foreign Key)
 
-**Categories Table:**
-- category_id (Primary Key)
-- name
-- description
-- created_by (Foreign Key)
-- created_date
+**Categories Table:** category_id (Primary Key), name, description, created_by (Foreign Key), created_date
 
-### 4.2.2 Database Relationships
-- Users can create multiple topics (One-to-Many)
-- Topics belong to categories (Many-to-One)
-- Topics contain multiple posts (One-to-Many)
-- Posts can have nested replies (Self-referencing)
+**Database Relationships:** Users can create multiple topics (One-to-Many), topics belong to categories (Many-to-One), topics contain multiple posts (One-to-Many), and posts can have nested replies (Self-referencing).
 
 ## 4.3 Data Flow Diagrams
 
-### 4.3.1 Context Level DFD
-The context diagram shows the system boundary and external entities:
+The context diagram shows the system boundary and external entities including users (Members, Moderators, Administrators), email service, and file storage system. Data flows include user requests and responses, email notifications, and file uploads and downloads.
 
-**External Entities:**
-- Users (Members, Moderators, Administrators)
-- Email Service
-- File Storage System
-
-**Data Flows:**
-- User requests and responses
-- Email notifications
-- File uploads and downloads
-
-### 4.3.2 Level 1 DFD
-Shows major functional processes:
-
-**Processes:**
-1. User Authentication Process
-2. Topic Management Process
-3. Discussion Management Process
-4. Search and Navigation Process
-5. Administrative Process
+The Level 1 DFD shows major functional processes: User Authentication Process, Topic Management Process, Discussion Management Process, Search and Navigation Process, and Administrative Process.
 
 ## 4.4 Use Case Diagrams
 
-### 4.4.1 Actor Identification
-**Primary Actors:**
-- Guest User
-- Registered User
-- Moderator
-- Administrator
+**Primary Actors:** Guest User, Registered User, Moderator, Administrator
 
-### 4.4.2 Use Cases
+**Guest User Use Cases:** Browse topics, search content, register account
 
-**Guest User Use Cases:**
-- Browse topics
-- Search content
-- Register account
+**Registered User Use Cases:** Login/logout, create topics, post replies, edit profile, bookmark topics
 
-**Registered User Use Cases:**
-- Login/logout
-- Create topics
-- Post replies
-- Edit profile
-- Bookmark topics
+**Moderator Use Cases:** Moderate content, manage categories, handle user reports
 
-**Moderator Use Cases:**
-- Moderate content
-- Manage categories
-- Handle user reports
-
-**Administrator Use Cases:**
-- User management
-- System configuration
-- Backup and restore
+**Administrator Use Cases:** User management, system configuration, backup and restore
 
 ## 4.5 ER Diagrams
 
-### 4.5.1 Entity-Relationship Model
-The ER diagram represents the relationships between entities:
+The Entity-Relationship model represents the relationships between entities:
 
 **Entities and Attributes:**
 - User (user_id, username, email, password, role)
@@ -500,173 +314,97 @@ The ER diagram represents the relationships between entities:
 
 ## 4.6 Module Design
 
-### 4.6.1 User Management Module
-**Components:**
-- Registration controller
-- Authentication service
-- Profile management
-- Session management
+**User Management Module Components:** Registration controller, authentication service, profile management, session management
 
-### 4.6.2 Discussion Module
-**Components:**
-- Topic controller
-- Post controller
-- Category management
-- Search service
+**Discussion Module Components:** Topic controller, post controller, category management, search service
 
-### 4.6.3 Administrative Module
-**Components:**
-- User administration
-- Content moderation
-- System settings
-- Analytics dashboard
+**Administrative Module Components:** User administration, content moderation, system settings, analytics dashboard
+
+## 4.7 Flow Charts
+
+The system utilizes several flow charts to represent the logical flow of processes and operations:
+
+### 4.7.1 User Registration Flow
+The registration process follows a sequential flow:
+1. User accesses registration page
+2. User fills in registration form (username, email, password)
+3. System validates input data
+4. System checks for duplicate username/email
+5. If valid, create user account and store in database
+6. Send verification email to user
+7. User verifies email and account is activated
+
+### 4.7.2 User Authentication Flow
+The login process includes:
+1. User enters credentials (email and password)
+2. System validates input format
+3. System checks credentials against database
+4. If valid, create session and redirect to dashboard
+5. If invalid, display error message and allow retry
+
+### 4.7.3 Topic Creation Flow
+The process for creating a new discussion topic:
+1. Authenticated user clicks "New Topic"
+2. User selects category and enters title and description
+3. System validates input data
+4. System stores topic in database
+5. System updates category statistics
+6. Redirect user to newly created topic page
+
+### 4.7.4 Discussion Reply Flow
+The reply process follows:
+1. User views a topic/discussion
+2. User clicks "Reply" button
+3. User enters reply content
+4. System validates input
+5. System stores reply in database
+6. System updates topic reply count
+7. Display updated discussion with new reply
+
+### 4.7.5 Administrative Moderation Flow
+The content moderation process:
+1. Admin/Moderator reviews reported content
+2. Admin evaluates content against guidelines
+3. Admin decides action (approve, edit, delete, warn user)
+4. System executes selected action
+5. System logs moderation activity
+6. Notify relevant users of action taken
 
 ---
 
 # 5. IMPLEMENTATION
 
-## 5.1 Technologies Used
+## 5.1 Technology and Tools
 
-### 5.1.1 Frontend Technologies
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Styling and responsive design
-- **JavaScript**: Client-side interactivity
-- **Bootstrap**: Responsive framework
-- **jQuery**: DOM manipulation and AJAX
+**Frontend Technologies:** HTML5 (Semantic markup and structure), CSS3 (Styling and responsive design), JavaScript (Client-side interactivity), Bootstrap (Responsive framework), jQuery (DOM manipulation and AJAX)
 
-### 5.1.2 Backend Technologies
-- **PHP**: Server-side scripting
-- **MySQL**: Database management
-- **Apache**: Web server
-- **Composer**: Dependency management
+**Backend Technologies:** PHP (Server-side scripting), MySQL (Database management), Apache (Web server), Composer (Dependency management)
 
-### 5.1.3 Development Tools
-- **Git**: Version control
-- **VS Code**: Code editor
-- **XAMPP**: Development environment
-- **phpMyAdmin**: Database administration
+**Development Tools:** Git (Version control), VS Code (Code editor), XAMPP (Development environment), phpMyAdmin (Database administration)
 
 ## 5.2 Development Environment
 
-### 5.2.1 Hardware Requirements
-- Processor: Intel Core i3 or equivalent
-- RAM: 4GB minimum, 8GB recommended
-- Storage: 20GB free space
-- Internet connection for development
+**Hardware Requirements:** Processor: Intel Core i3 or equivalent, RAM: 4GB minimum (8GB recommended), Storage: 20GB free space, Internet connection for development
 
-### 5.2.2 Software Requirements
-- Operating System: Windows/Linux/Mac
-- Web Server: Apache 2.4+
-- PHP: Version 7.4 or higher
-- MySQL: Version 5.7 or higher
-- Browser: Modern web browser with JavaScript enabled
+**Software Requirements:** Operating System: Windows/Linux/Mac, Web Server: Apache 2.4+, PHP: Version 7.4 or higher, MySQL: Version 5.7 or higher, Browser: Modern web browser with JavaScript enabled
 
-### 5.2.3 Development Setup
-1. Install XAMPP/WAMP server
-2. Configure Apache and MySQL
-3. Create project directory in htdocs
-4. Import database schema
-5. Configure database connection
+**Development Setup:** Install XAMPP/WAMP server, configure Apache and MySQL, create project directory in htdocs, import database schema, and configure database connection.
 
 ## 5.3 Code Structure
 
-### 5.3.1 Directory Structure
-```
-project_root/
-├── assets/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── includes/
-│   ├── config.php
-│   ├── database.php
-│   └── functions.php
-├── pages/
-│   ├── login.php
-│   ├── register.php
-│   ├── forum.php
-│   └── profile.php
-├── admin/
-│   ├── dashboard.php
-│   └── users.php
-├── classes/
-│   ├── User.php
-│   ├── Topic.php
-│   └── Post.php
-└── index.php
-```
+The project follows a structured directory organization with assets/ (css/, js/, images/), includes/ (config.php, database.php, functions.php), pages/ (login.php, register.php, forum.php, profile.php), admin/ (dashboard.php, users.php), classes/ (User.php, Topic.php, Post.php), and index.php as the root.
 
-### 5.3.2 Naming Conventions
-- Files: lowercase with underscores (user_profile.php)
-- Classes: PascalCase (UserManager)
-- Functions: camelCase (getUserData)
-- Variables: camelCase (userEmail)
+**Naming Conventions:** Files use lowercase with underscores (user_profile.php), classes use PascalCase (UserManager), functions use camelCase (getUserData), and variables use camelCase (userEmail).
 
 ## 5.4 Key Modules Implementation
 
-### 5.4.1 User Authentication Module
-```php
-class Auth {
-    public static function login($email, $password) {
-        // Validate credentials
-        // Create session
-        // Return success/failure
-    }
-    
-    public static function logout() {
-        // Destroy session
-        // Clear cookies
-    }
-    
-    public static function checkLogin() {
-        // Verify session validity
-    }
-}
-```
+The system includes several key modules for core functionality:
 
-### 5.4.2 Database Connection Module
-```php
-class Database {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
-    private $dbname = 'discussion_forum';
-    
-    public function connect() {
-        try {
-            $pdo = new PDO(
-                "mysql:host=$this->host;dbname=$this->dbname",
-                $this->user,
-                $this->pass
-            );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $pdo;
-        } catch(PDOException $e) {
-            die("Connection failed: " . $e->getMessage());
-        }
-    }
-}
-```
+**User Authentication Module:** Handles user login with credential validation and session creation, logout functionality with session destruction and cookie clearing, and login verification to check session validity.
 
-### 5.4.3 Topic Management Module
-```php
-class Topic {
-    private $db;
-    
-    public function __construct() {
-        $this->db = new Database();
-    }
-    
-    public function createTopic($title, $content, $category_id, $user_id) {
-        // Insert topic into database
-        // Return topic ID
-    }
-    
-    public function getTopics($category_id = null, $limit = 10) {
-        // Retrieve topics with optional filtering
-    }
-}
-```
+**Database Connection Module:** Manages database connectivity using PDO with MySQL, implements connection pooling for efficiency, handles connection errors gracefully, and sets appropriate PDO attributes for error handling.
+
+**Topic Management Module:** Provides functionality to create new topics with validation, retrieve topics with optional filtering and pagination, update existing topics including locking/unlocking, and increment view counts for topic analytics.
 
 ---
 
@@ -674,111 +412,42 @@ class Topic {
 
 ## 6.1 Testing Strategy
 
-### 6.1.1 Testing Types
-**Unit Testing:**
-- Test individual functions and methods
-- Verify input validation
-- Check database operations
+**Unit Testing:** Test individual functions and methods, verify input validation, and check database operations.
 
-**Integration Testing:**
-- Test module interactions
-- Verify data flow between components
-- Check API endpoints
+**Integration Testing:** Test module interactions, verify data flow between components, and check API endpoints.
 
-**System Testing:**
-- End-to-end functionality testing
-- User acceptance testing
-- Performance testing
+**System Testing:** End-to-end functionality testing, user acceptance testing, and performance testing.
 
-**User Acceptance Testing:**
-- Real user scenarios
-- Usability testing
-- Compatibility testing
+**User Acceptance Testing:** Real user scenarios, usability testing, and compatibility testing.
 
-### 6.1.2 Testing Tools
-- Manual testing procedures
-- Browser developer tools
-- Database testing tools
-- Performance monitoring tools
+**Testing Tools:** Manual testing procedures, browser developer tools, database testing tools, and performance monitoring tools.
 
 ## 6.2 Test Cases
 
-### 6.2.1 User Registration Test Cases
+**User Registration Test Cases:**
+- Test Case 1 (Valid Registration): Input valid username, email, password; Expected: Account created successfully; Status: Pass
+- Test Case 2 (Duplicate Email): Input existing email address; Expected: Error message displayed; Status: Pass
+- Test Case 3 (Weak Password): Input password less than 6 characters; Expected: Password strength validation; Status: Pass
 
-**Test Case 1: Valid Registration**
-- Input: Valid username, email, password
-- Expected: Account created successfully
-- Status: Pass
+**Login Functionality Test Cases:**
+- Test Case 1 (Valid Login): Input correct email and password; Expected: Successful login and redirect; Status: Pass
+- Test Case 2 (Invalid Credentials): Input wrong email or password; Expected: Error message displayed; Status: Pass
+- Test Case 3 (Account Lockout): Input multiple failed login attempts; Expected: Account temporarily locked; Status: Pass
 
-**Test Case 2: Duplicate Email**
-- Input: Existing email address
-- Expected: Error message displayed
-- Status: Pass
-
-**Test Case 3: Weak Password**
-- Input: Password less than 6 characters
-- Expected: Password strength validation
-- Status: Pass
-
-### 6.2.2 Login Functionality Test Cases
-
-**Test Case 1: Valid Login**
-- Input: Correct email and password
-- Expected: Successful login and redirect
-- Status: Pass
-
-**Test Case 2: Invalid Credentials**
-- Input: Wrong email or password
-- Expected: Error message displayed
-- Status: Pass
-
-**Test Case 3: Account Lockout**
-- Input: Multiple failed login attempts
-- Expected: Account temporarily locked
-- Status: Pass
-
-### 6.2.3 Topic Creation Test Cases
-
-**Test Case 1: Create Topic**
-- Input: Valid title and content
-- Expected: Topic created and displayed
-- Status: Pass
-
-**Test Case 2: Empty Title**
-- Input: Empty title field
-- Expected: Validation error
-- Status: Pass
-
-**Test Case 3: Long Content**
-- Input: Content exceeding limit
-- Expected: Character count validation
-- Status: Pass
+**Topic Creation Test Cases:**
+- Test Case 1 (Create Topic): Input valid title and content; Expected: Topic created and displayed; Status: Pass
+- Test Case 2 (Empty Title): Input empty title field; Expected: Validation error; Status: Pass
+- Test Case 3 (Long Content): Input content exceeding limit; Expected: Character count validation; Status: Pass
 
 ## 6.3 Test Results
 
-### 6.3.1 Unit Testing Results
-- Total test cases: 25
-- Passed: 23
-- Failed: 2
-- Success rate: 92%
+**Unit Testing Results:** Total test cases: 25, Passed: 23, Failed: 2, Success rate: 92%
 
-### 6.3.2 Integration Testing Results
-- Total test cases: 15
-- Passed: 14
-- Failed: 1
-- Success rate: 93%
+**Integration Testing Results:** Total test cases: 15, Passed: 14, Failed: 1, Success rate: 93%
 
-### 6.3.3 System Testing Results
-- Total test cases: 20
-- Passed: 18
-- Failed: 2
-- Success rate: 90%
+**System Testing Results:** Total test cases: 20, Passed: 18, Failed: 2, Success rate: 90%
 
-### 6.3.4 Performance Testing Results
-- Average response time: 1.2 seconds
-- Peak load handling: 500 concurrent users
-- Memory usage: Within acceptable limits
-- Database query performance: Optimized
+**Performance Testing Results:** Average response time: 1.2 seconds, Peak load handling: 500 concurrent users, Memory usage: Within acceptable limits, Database query performance: Optimized
 
 ---
 
@@ -786,87 +455,41 @@ class Topic {
 
 ## 7.1 System Features
 
-### 7.1.1 Implemented Features
-1. **User Registration and Authentication**
-   - Secure user registration with email verification
-   - Password encryption and secure login
-   - Session management and logout functionality
+**Implemented Features:**
 
-2. **Discussion Management**
-   - Topic creation with rich text editing
-   - Nested reply system
-   - Category-based organization
-   - Post editing and deletion
+1. **User Registration and Authentication:** Secure user registration with email verification, password encryption and secure login, session management and logout functionality
 
-3. **Search and Navigation**
-   - Full-text search across topics and posts
-   - Advanced filtering options
-   - Pagination for large result sets
-   - User-friendly navigation
+2. **Discussion Management:** Topic creation with rich text editing, nested reply system, category-based organization, post editing and deletion
 
-4. **User Profile Management**
-   - Profile customization
-   - Avatar upload functionality
-   - User statistics and activity tracking
+3. **Search and Navigation:** Full-text search across topics and posts, advanced filtering options, pagination for large result sets, user-friendly navigation
 
-5. **Administrative Tools**
-   - User management dashboard
-   - Content moderation capabilities
-   - System settings configuration
-   - Analytics and reporting
+4. **User Profile Management:** Profile customization, avatar upload functionality, user statistics and activity tracking
 
-### 7.1.2 User Interface Features
-- Responsive design for all devices
-- Intuitive navigation and layout
-- Modern UI components
-- Accessibility compliance
-- Fast loading times
+5. **Administrative Tools:** User management dashboard, content moderation capabilities, system settings configuration, analytics and reporting
+
+**User Interface Features:** Responsive design for all devices, intuitive navigation and layout, modern UI components, accessibility compliance, fast loading times
 
 ## 7.2 Performance Analysis
 
-### 7.2.1 Performance Metrics
-**Response Times:**
-- Home page load: 0.8 seconds
-- Topic page load: 1.1 seconds
-- Search results: 1.5 seconds
-- User login: 0.5 seconds
+**Performance Metrics:**
 
-**Scalability Metrics:**
-- Concurrent users supported: 1000+
-- Database queries per second: 500+
-- Memory usage: 256MB average
-- CPU utilization: 45% under load
+Response Times: Home page load: 0.8 seconds, Topic page load: 1.1 seconds, Search results: 1.5 seconds, User login: 0.5 seconds
 
-### 7.2.2 Optimization Techniques
-1. **Database Optimization**
-   - Indexed frequently queried columns
-   - Query optimization and caching
-   - Connection pooling
+Scalability Metrics: Concurrent users supported: 1000+, Database queries per second: 500+, Memory usage: 256MB average, CPU utilization: 45% under load
 
-2. **Frontend Optimization**
-   - Minified CSS and JavaScript
-   - Image optimization
-   - Lazy loading implementation
+**Optimization Techniques:**
 
-3. **Server Optimization**
-   - Caching mechanisms
-   - Load balancing considerations
-   - CDN integration potential
+Database Optimization: Indexed frequently queried columns, query optimization and caching, connection pooling
+
+Frontend Optimization: Minified CSS and JavaScript, image optimization, lazy loading implementation
+
+Server Optimization: Caching mechanisms, load balancing considerations, CDN integration potential
 
 ## 7.3 Screenshots *(to be added)*
 
-### 7.3.1 User Interface Screenshots
-- Home page
-- Registration page
-- Login page
-- Discussion forum
-- User profile page
-- Administrative dashboard
+User Interface Screenshots: Home page, Registration page, Login page, Discussion forum, User profile page, Administrative dashboard
 
-### 7.3.2 Mobile Responsiveness
-- Mobile home page
-- Mobile discussion view
-- Mobile user menu
+Mobile Responsiveness: Mobile home page, Mobile discussion view, Mobile user menu
 
 ---
 
@@ -903,58 +526,31 @@ The Discussion Forum System has been successfully developed and implemented, mee
 
 ## 8.3 Future Enhancements
 
-### 8.3.1 Short-term Enhancements (6-12 months)
-1. **Real-time Features**
-   - WebSocket integration for live updates
-   - Real-time notifications
-   - Live chat functionality
+**Short-term Enhancements (6-12 months):**
 
-2. **Enhanced Moderation**
-   - Automated spam detection
-   - Advanced reporting system
-   - Content approval workflow
+Real-time Features: WebSocket integration for live updates, real-time notifications, live chat functionality
 
-3. **Improved Search**
-   - Full-text search with relevance ranking
-   - Advanced filtering options
-   - Search suggestions and autocomplete
+Enhanced Moderation: Automated spam detection, advanced reporting system, content approval workflow
 
-### 8.3.2 Long-term Enhancements (1-2 years)
-1. **Mobile Application**
-   - Native iOS and Android apps
-   - Push notifications
-   - Offline content access
+Improved Search: Full-text search with relevance ranking, advanced filtering options, search suggestions and autocomplete
 
-2. **Advanced Analytics**
-   - User behavior analytics
-   - Content performance metrics
-   - Community insights dashboard
+**Long-term Enhancements (1-2 years):**
 
-3. **Integration Capabilities**
-   - Social media integration
-   - Third-party API integrations
-   - Single sign-on (SSO) support
+Mobile Application: Native iOS and Android apps, push notifications, offline content access
 
-4. **AI/ML Features**
-   - Content recommendation system
-   - Automated content categorization
-   - Sentiment analysis for posts
+Advanced Analytics: User behavior analytics, content performance metrics, community insights dashboard
 
-### 8.3.3 Technical Improvements
-1. **Microservices Architecture**
-   - API-first design
-   - Service separation
-   - Improved scalability
+Integration Capabilities: Social media integration, third-party API integrations, single sign-on (SSO) support
 
-2. **Cloud Deployment**
-   - Cloud-native architecture
-   - Auto-scaling capabilities
-   - Global content delivery
+AI/ML Features: Content recommendation system, automated content categorization, sentiment analysis for posts
 
-3. **Enhanced Security**
-   - Multi-factor authentication
-   - Advanced threat detection
-   - Regular security audits
+**Technical Improvements:**
+
+Microservices Architecture: API-first design, service separation, improved scalability
+
+Cloud Deployment: Cloud-native architecture, auto-scaling capabilities, global content delivery
+
+Enhanced Security: Multi-factor authentication, advanced threat detection, regular security audits
 
 ---
 
@@ -986,457 +582,66 @@ The Discussion Forum System has been successfully developed and implemented, mee
 
 ## 10.1 Source Code
 
-### 10.1.1 Database Schema
-```sql
-CREATE DATABASE discussion_forum;
-
-USE discussion_forum;
-
-CREATE TABLE users (
-    user_id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login TIMESTAMP NULL,
-    user_role ENUM('user', 'moderator', 'admin') DEFAULT 'user',
-    profile_picture VARCHAR(255) NULL,
-    bio TEXT NULL,
-    is_active BOOLEAN DEFAULT TRUE
-);
-
-CREATE TABLE categories (
-    category_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    description TEXT,
-    created_by INT,
-    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (created_by) REFERENCES users(user_id)
-);
-
-CREATE TABLE topics (
-    topic_id INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    created_by INT NOT NULL,
-    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    category_id INT NOT NULL,
-    view_count INT DEFAULT 0,
-    reply_count INT DEFAULT 0,
-    is_sticky BOOLEAN DEFAULT FALSE,
-    is_locked BOOLEAN DEFAULT FALSE,
-    last_post_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (created_by) REFERENCES users(user_id),
-    FOREIGN KEY (category_id) REFERENCES categories(category_id)
-);
-
-CREATE TABLE posts (
-    post_id INT PRIMARY KEY AUTO_INCREMENT,
-    topic_id INT NOT NULL,
-    user_id INT NOT NULL,
-    content TEXT NOT NULL,
-    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_date TIMESTAMP NULL,
-    parent_post_id INT NULL,
-    is_deleted BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (topic_id) REFERENCES topics(topic_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
-    FOREIGN KEY (parent_post_id) REFERENCES posts(post_id)
-);
-
-CREATE TABLE user_sessions (
-    session_id VARCHAR(255) PRIMARY KEY,
-    user_id INT NOT NULL,
-    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_activity TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    ip_address VARCHAR(45),
-    user_agent TEXT,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-```
-
-### 10.1.2 Core PHP Classes
-
-**Database Connection Class:**
-```php
-<?php
-class Database {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
-    private $dbname = 'discussion_forum';
-    private $pdo;
-
-    public function __construct() {
-        try {
-            $this->pdo = new PDO(
-                "mysql:host=$this->host;dbname=$this->dbname;charset=utf8mb4",
-                $this->user,
-                $this->pass
-            );
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        } catch(PDOException $e) {
-            die("Database connection failed: " . $e->getMessage());
-        }
-    }
-
-    public function getConnection() {
-        return $this->pdo;
-    }
-
-    public function prepare($sql) {
-        return $this->pdo->prepare($sql);
-    }
-}
-?>
-```
-
-**User Management Class:**
-```php
-<?php
-class User {
-    private $db;
-    private $table = 'users';
-
-    public function __construct() {
-        $this->db = new Database();
-    }
-
-    public function register($username, $email, $password) {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        $sql = "INSERT INTO {$this->table} (username, email, password_hash) \
-                VALUES (:username, :email, :password_hash)";
-        
-        try {
-            $stmt = $this->db->prepare($sql);
-            $stmt->execute([
-                ':username' => $username,
-                ':email' => $email,
-                ':password_hash' => $hashed_password
-            ]);
-            return $this->db->getConnection()->lastInsertId();
-        } catch(PDOException $e) {
-            return false;
-        }
-    }
-
-    public function login($email, $password) {
-        $sql = "SELECT user_id, username, password_hash, user_role FROM {$this->table} \
-                WHERE email = :email AND is_active = 1";
-        
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([':email' => $email]);
-        $user = $stmt->fetch();
-        
-        if ($user && password_verify($password, $user['password_hash'])) {
-            return $user;
-        }
-        return false;
-    }
-
-    public function getUserById($user_id) {
-        $sql = "SELECT user_id, username, email, registration_date, user_role, \
-                       profile_picture, bio FROM {$this->table} WHERE user_id = :user_id";
-        
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([':user_id' => $user_id]);
-        return $stmt->fetch();
-    }
-
-    public function updateProfile($user_id, $data) {
-        $sql = "UPDATE {$this->table} SET ";
-        $params = [];
-        $updates = [];
-        
-        if (isset($data['username'])) {
-            $updates[] = "username = :username";
-            $params[':username'] = $data['username'];
-        }
-        if (isset($data['bio'])) {
-            $updates[] = "bio = :bio";
-            $params[':bio'] = $data['bio'];
-        }
-        if (isset($data['profile_picture'])) {
-            $updates[] = "profile_picture = :profile_picture";
-            $params[':profile_picture'] = $data['profile_picture'];
-        }
-        
-        if (empty($updates)) return false;
-        
-        $sql .= implode(', ', $updates) . " WHERE user_id = :user_id";
-        $params[':user_id'] = $user_id;
-        
-        $stmt = $this->db->prepare($sql);
-        return $stmt->execute($params);
-    }
-}
-?>
-```
-
-**Topic Management Class:**
-```php
-<?php
-class Topic {
-    private $db;
-    private $table = 'topics';
-
-    public function __construct() {
-        $this->db = new Database();
-    }
-
-    public function createTopic($title, $description, $category_id, $user_id) {
-        $sql = "INSERT INTO {$this->table} (title, description, category_id, created_by) \
-                VALUES (:title, :description, :category_id, :created_by)";
-        
-        try {
-            $stmt = $this->db->prepare($sql);
-            $stmt->execute([
-                ':title' => $title,
-                ':description' => $description,
-                ':category_id' => $category_id,
-                ':created_by' => $user_id
-            ]);
-            return $this->db->getConnection()->lastInsertId();
-        } catch(PDOException $e) {
-            return false;
-        }
-    }
-
-    public function getTopics($category_id = null, $limit = 10, $offset = 0) {
-        $sql = "SELECT t.*, u.username, c.name as category_name \
-                FROM {$this->table} t \
-                JOIN users u ON t.created_by = u.user_id \
-                JOIN categories c ON t.category_id = c.category_id";
-        
-        $params = [];
-        if ($category_id) {
-            $sql .= " WHERE t.category_id = :category_id";
-            $params[':category_id'] = $category_id;
-        }
-        
-        $sql .= " ORDER BY t.is_sticky DESC, t.last_post_date DESC \
-                  LIMIT :limit OFFSET :offset";
-        
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
-        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
-        if ($category_id) {
-            $stmt->bindValue(':category_id', $category_id, PDO::PARAM_INT);
-        }
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
-    public function getTopicById($topic_id) {
-        $sql = "SELECT t.*, u.username, c.name as category_name \
-                FROM {$this->table} t \
-                JOIN users u ON t.created_by = u.user_id \
-                JOIN categories c ON t.category_id = c.category_id \
-                WHERE t.topic_id = :topic_id";
-        
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([':topic_id' => $topic_id]);
-        return $stmt->fetch();
-    }
-
-    public function updateTopic($topic_id, $data) {
-        $sql = "UPDATE {$this->table} SET ";
-        $params = [];
-        $updates = [];
-        
-        if (isset($data['title'])) {
-            $updates[] = "title = :title";
-            $params[':title'] = $data['title'];
-        }
-        if (isset($data['description'])) {
-            $updates[] = "description = :description";
-            $params[':description'] = $data['description'];
-        }
-        if (isset($data['is_locked'])) {
-            $updates[] = "is_locked = :is_locked";
-            $params[':is_locked'] = $data['is_locked'];
-        }
-        
-        if (empty($updates)) return false;
-        
-        $sql .= implode(', ', $updates) . " WHERE topic_id = :topic_id";
-        $params[':topic_id'] = $topic_id;
-        
-        $stmt = $this->db->prepare($sql);
-        return $stmt->execute($params);
-    }
-
-    public function incrementViewCount($topic_id) {
-        $sql = "UPDATE {$this->table} SET view_count = view_count + 1 WHERE topic_id = :topic_id";
-        $stmt = $this->db->prepare($sql);
-        return $stmt->execute([':topic_id' => $topic_id]);
-    }
-}
-?>
-```
+The source code includes database schema and core PHP classes for the Discussion Forum System. The database schema defines tables for users, categories, topics, posts, and user sessions with appropriate relationships and constraints. Core PHP classes include Database connection class for managing PDO connections, User management class for registration and authentication, and Topic management class for topic creation and retrieval.
 
 ## 10.2 User Manual
 
-### 10.2.1 Getting Started
+**Getting Started:**
 
-#### User Registration
-1. Click on "Register" link on the home page
-2. Fill in the registration form:
-   - Username (unique, 3-50 characters)
-   - Email address (valid email format)
-   - Password (minimum 6 characters)
-3. Click "Register" button
-4. Check your email for verification link
-5. Click the verification link to activate your account
+User Registration: Click on "Register" link on the home page, fill in the registration form (Username: unique, 3-50 characters; Email address: valid email format; Password: minimum 6 characters), click "Register" button, check your email for verification link, and click the verification link to activate your account.
 
-#### User Login
-1. Click on "Login" link
-2. Enter your email and password
-3. Click "Login" button
-4. You will be redirected to the forum home page
+User Login: Click on "Login" link, enter your email and password, click "Login" button, and you will be redirected to the forum home page.
 
-### 10.2.2 Using the Forum
+**Using the Forum:**
 
-#### Browsing Topics
-1. Navigate to the forum home page
-2. Browse topics by category or view all topics
-3. Click on any topic title to view the discussion
-4. Use pagination to navigate through multiple pages
+Browsing Topics: Navigate to the forum home page, browse topics by category or view all topics, click on any topic title to view the discussion, and use pagination to navigate through multiple pages.
 
-#### Creating a New Topic
-1. Click "New Topic" button
-2. Select a category from the dropdown
-3. Enter a descriptive title
-4. Write your topic content
-5. Click "Create Topic" to post
+Creating a New Topic: Click "New Topic" button, select a category from the dropdown, enter a descriptive title, write your topic content, and click "Create Topic" to post.
 
-#### Replying to Topics
-1. Open a topic you want to reply to
-2. Scroll to the bottom of the topic
-3. Click "Reply" button
-4. Write your response
-5. Click "Post Reply"
+Replying to Topics: Open a topic you want to reply to, scroll to the bottom of the topic, click "Reply" button, write your response, and click "Post Reply".
 
-#### Editing Posts
-1. Find your post in a topic
-2. Click the "Edit" button next to your post
-3. Modify the content
-4. Click "Save Changes"
+Editing Posts: Find your post in a topic, click the "Edit" button next to your post, modify the content, and click "Save Changes".
 
-### 10.2.3 Managing Your Profile
+**Managing Your Profile:**
 
-#### Updating Profile Information
-1. Click on your username in the top navigation
-2. Select "Profile" from the dropdown
-3. Update your bio, profile picture, or other information
-4. Click "Save Changes"
+Updating Profile Information: Click on your username in the top navigation, select "Profile" from the dropdown, update your bio, profile picture, or other information, and click "Save Changes".
 
-#### Changing Password
-1. Go to your profile page
-2. Click "Change Password" tab
-3. Enter current password
-4. Enter new password twice
-5. Click "Update Password"
+Changing Password: Go to your profile page, click "Change Password" tab, enter current password, enter new password twice, and click "Update Password".
 
-### 10.2.4 Search and Navigation
+**Search and Navigation:**
 
-#### Using Search
-1. Use the search bar in the top navigation
-2. Enter keywords, usernames, or topic titles
-3. Use filters to narrow down results
-4. Click on search results to view topics
+Using Search: Use the search bar in the top navigation, enter keywords, usernames, or topic titles, use filters to narrow down results, and click on search results to view topics.
 
-#### Using Filters
-- Filter by category
-- Filter by date range
-- Filter by user
-- Sort by newest, oldest, or most replies
+Using Filters: Filter by category, filter by date range, filter by user, and sort by newest, oldest, or most replies.
 
-### 10.2.5 Moderator Functions
+**Moderator Functions:**
 
-#### Content Moderation
-1. Access moderator panel
-2. Review reported posts
-3. Take appropriate action:
-   - Edit post
-   - Delete post
-   - Warn user
-   - Ban user
+Content Moderation: Access moderator panel, review reported posts, and take appropriate action (edit post, delete post, warn user, ban user).
 
-#### Category Management
-1. Access admin panel
-2. Navigate to "Categories"
-3. Create new categories
-4. Edit existing categories
-5. Reorder categories
+Category Management: Access admin panel, navigate to "Categories", create new categories, edit existing categories, and reorder categories.
 
-### 10.2.6 Administrator Functions
+**Administrator Functions:**
 
-#### User Management
-1. Access admin dashboard
-2. Navigate to "Users" section
-3. View user list
-4. Edit user roles
-5. Activate/deactivate accounts
-6. Reset user passwords
+User Management: Access admin dashboard, navigate to "Users" section, view user list, edit user roles, activate/deactivate accounts, and reset user passwords.
 
-#### System Settings
-1. Access admin dashboard
-2. Navigate to "Settings"
-3. Configure forum settings
-4. Manage site configuration
-5. Set up email settings
+System Settings: Access admin dashboard, navigate to "Settings", configure forum settings, manage site configuration, and set up email settings.
 
-### 10.2.7 Troubleshooting
+**Troubleshooting:**
 
-#### Common Issues
+Common Issues:
+- Can't Login: Check if your account is activated, verify email and password, clear browser cache and cookies, try a different browser
+- Posts Not Appearing: Check if post was approved by moderators, refresh the page, check internet connection
+- Search Not Working: Try different keywords, use fewer search terms, check spelling
 
-**Can't Login:**
-- Check if your account is activated
-- Verify email and password
-- Clear browser cache and cookies
-- Try a different browser
+Getting Help: Use the forum's help section, contact administrators, check FAQ section, report bugs through the contact form.
 
-**Posts Not Appearing:**
-- Check if post was approved by moderators
-- Refresh the page
-- Check internet connection
+**Best Practices:**
 
-**Search Not Working:**
-- Try different keywords
-- Use fewer search terms
-- Check spelling
+Posting Guidelines: Use clear, descriptive titles; provide detailed information; be respectful to other users; use appropriate language; stay on topic.
 
-#### Getting Help
-- Use the forum's help section
-- Contact administrators
-- Check FAQ section
-- Report bugs through the contact form
+Community Guidelines: Respect others' opinions, no spam or advertising, report inappropriate content, help other community members, follow forum rules.
 
-### 10.2.8 Best Practices
-
-#### Posting Guidelines
-1. Use clear, descriptive titles
-2. Provide detailed information
-3. Be respectful to other users
-4. Use appropriate language
-5. Stay on topic
-
-#### Community Guidelines
-1. Respect others' opinions
-2. No spam or advertising
-3. Report inappropriate content
-4. Help other community members
-5. Follow forum rules
-
-#### Security Tips
-1. Use strong passwords
-2. Don't share account information
-3. Log out when using public computers
-4. Report suspicious activity
-5. Keep software updated
+Security Tips: Use strong passwords, don't share account information, log out when using public computers, report suspicious activity, keep software updated.
 
 ---
 
